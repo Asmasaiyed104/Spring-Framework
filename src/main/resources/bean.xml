@@ -7,5 +7,33 @@
         <constructor-arg name="firstName" value="Asma"></constructor-arg>
         <constructor-arg name="lastName" value="S"></constructor-arg>
         <constructor-arg name="company" value="RBC"></constructor-arg>
+        <constructor-arg name="phoneNumbers">
+            <list>
+                <value>89877656</value>
+                <value>12345678</value>
+                <value>98765432</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="workEx">
+            <map>
+                <entry key="Google" value="Software Engineer"/>
+                <entry key="Amazon" value="Java Developer"/>
+            </map>
+        </constructor-arg>
     </bean>
+    <bean id="student" class="io.pragra.learning.july24springbean.Student">
+        <constructor-arg value="John"/>
+        <constructor-arg value="Doe"/>
+        <constructor-arg value="ROLL123"/>
+    </bean>
+    <bean id="v8Engine" class="io.pragra.learning.july24springbean.V8Engine" />
+    <bean class="io.pragra.learning.july24springbean.BMW" name ="m3">
+        <constructor-arg name="model" value="m3"></constructor-arg>
+        <constructor-arg name="hp" value="600"></constructor-arg>
+        <constructor-arg name="year" value="2022"></constructor-arg>
+
+        <constructor-arg name="engine" ref="v8Engine"/>
+
+    </bean>
+
 </beans>

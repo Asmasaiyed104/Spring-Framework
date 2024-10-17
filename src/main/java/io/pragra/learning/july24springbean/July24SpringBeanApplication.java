@@ -15,6 +15,9 @@ public class July24SpringBeanApplication {
         Employee employee = context.getBean(Employee.class);
         System.out.println(employee);
 
+        Student student = context.getBean(Student.class);
+        System.out.println(student);
+
 //        BMW m4 = new BMW("M4", "2024", 450, new DieselEngine(550));
 //        System.out.println(m4);
 
